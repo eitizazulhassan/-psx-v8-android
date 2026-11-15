@@ -1,17 +1,24 @@
 
-plugins {
-    id 'com.android.application'
-}
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-android {
-    namespace 'com.psx.scanner'
-    compileSdk 35
+    <uses-permission android:name="android.permission.INTERNET" />
 
-    defaultConfig {
-        applicationId 'com.psx.scanner'
-        minSdk 23
-        targetSdk 35
-        versionCode 8
-        versionName '8.0'
-    }
-}
+    <application
+        android:allowBackup="true"
+        android:label="PSX AI Scanner V8"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name="psx.scanner.MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+</manifest>
